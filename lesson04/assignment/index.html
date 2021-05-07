@@ -5,11 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/3f336ee7e9.js" crossorigin="anonymous"></script>
+  <title>Assignment 4</title>
 </head>
 <body>
-  <main class="main">
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    
+    <!-- Simulate a smartphone / tablet -->
+    <!-- <div class="mobile-container"> -->
+    
+    <!-- Top Navigation Menu -->
+    
+    
+    <!-- <div style="padding-left:16px">
+      <h3>Vertical Mobile Navbar</h3>
+      <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+      <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+    </div> -->
+    
+    <!-- End smartphone / tablet look -->
+    <!-- </div> -->
 
-  </main>
+    <a href="#main-content" class="hidden">Skip to main content</a>
+	<div class="content">
+	<!--insert contents here.-->
+	<header id="top">
+		<h1 class="pageheader">Html300 Project</h1>
+		<!-- <hr> -->
+
+		<div class="topnav">
+			<a href="#home" class="active">Family Tree</a>
+			<div id="myLinks">
+			  <a href="#news">News</a>
+			  <a href="#contact">Contact</a>
+			  <a href="#about">About</a>
+			  <a class="active" href="./index.html"><i class="fas fa-home fa-lg"></i> Home</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			  <i class="fa fa-bars"></i>
+			</a>
+		  </div>
+
+	</header>
+	<ul class= "sticky">
+		<li class="linav">
+			<a class="active" href="./index.html"><i class="fas fa-home fa-lg"></i> Home</a>
+		</li>
+		<li class="linav">
+			<a href="./assignments.html" class="dropdown"><i class="fas fa-scroll fa-lg"></i> Assignments</a>
+		</li>
+		<li class="linav">
+			<a href="https://github.com/victorthoang" target="_blank"><i class="fab fa-github fa-lg"></i> GitHub</a>
+		</li>
+		<li class="linav">
+			<a href="https://jigsaw.w3.org/css-validator" target="_blank"><i class="fab fa-css3-alt fa-lg"></i> CSS Validator</a>
+		</li>
+		<li class="linav">
+			<a href="https://canvas.uw.edu" target="_blank"><i class="fas fa-graduation-cap fa-lg"></i> Canvas Homepage</a>
+		</li>
+		<li class="linav">
+			<a href="https://validator.w3.org/" target="_blank"><i class="fab fa-html5 fa-lg"></i> Website Validator</a>
+		</li>
+		<li class="linav">
+			<a href="https://www.10bestdesign.com/dirtymarkup/" target="_blank"><i class="fas fa-remove-format fa-lg"></i> Formatter</a>
+		</li>
+		<li class="linav">
+			<a href="about-me.html"><i class="fas fa-address-card fa-lg"></i> About Me</a>
+		</li>
+	</ul>
+	<main class="main">
+	<!-- <hr> -->
+		<h2 id="main-content">Hello!</h2>
+		<p>Welcome to the landing page of my Html 300 project! Future content will be added here as soon as I come up with content.</p>
+		<i class="fas fa-home"></i>
+		<p>In the mean time, here is a photo of my favorite doggo, Kaydee!</p>
+		<img alt="cute golden retriever staring back at the camera innocently" src="images/kaydee.jpg">
+	
+		<p>Or, if you prefer 
+			<span class="sr-only">this link opens in a new tab</span>
+			<a href="https://victorthoang.github.io/mockup/" target=_blank> cats</a>
+			...then you're one of THOSE PEOPLE!</p>
+
+	</main>
+	<!-- <hr> -->
+</div>
+	<footer class="footer">
+		<i class="far fa-copyright fa-lg"></i> 2020 Victor Hoang Inc. All rights reserved.
+	</footer>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+    
+    </body>
+    </html>
 </body>
 </html>

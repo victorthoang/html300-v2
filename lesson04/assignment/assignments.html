@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--insert meta data here-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+	<title>Hoang Family Tree!</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="https://kit.fontawesome.com/3f336ee7e9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!--insert contents here.-->
+	<header id="top">
+		<h1 class="pageheader">Html 300 Assignment 4</h1>
+
+		<div class="topnav">
+			<a href="#home" class="active">Family Tree</a>
+			<div id="myLinks">
+			  <a href="#news">News</a>
+			  <a href="#contact">Contact</a>
+			  <a href="#about">About</a>
+			  <a class="active" href="./index.html"><i class="fas fa-home fa-lg"></i> Home</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			  <i class="fa fa-bars"></i>
+			</a>
+		  </div>
+
+		<!-- <hr> -->
+		<div class="sticky">
+		<ul class="sticky content">
+			<li class="linav">
+				<a href="index.html"><i class="fas fa-home fa-lg"></i> Home</a>
+			</li>
+			<li class="linav">
+				<a href="#assignment-1">Family member 1</a>
+			</li>
+			<li class="linav">
+				<a href="#assignment-2"Family member 2</a>
+			</li>
+			<li class="linav">
+				<a href="#assignment-3">Family member 3</a>
+			</li>
+			<li class="linav">
+				<a href="#assignment-4">Family member 4</a>
+			</li>
+			<li class="linav">
+				<a href="#assignment-5">Family member 5</a>
+			</li>
+			<li class="linav">
+				<a href="#assignment-6">Family member 6</a>
+			</li>
+			<li class="linav">
+				<a href="https://github.com/victorthoang" target="_blank"><i class="fab fa-github fa-lg"></i> GitHub</a>
+			</li>
+			<li class="linav">
+				<a href="https://jigsaw.w3.org/css-validator" target="_blank"><i class="fab fa-css3-alt fa-lg"></i> CSS Validator</a>
+			</li>
+			<li class="linav">
+				<a href="https://canvas.uw.edu" target="_blank"><i class="fas fa-graduation-cap fa-lg"></i> Canvas Homepage</a>
+			</li>
+			<li class="linav">
+				<a href="https://validator.w3.org/" target="_blank"><i class="fab fa-html5 fa-lg"></i> Website Validator</a>
+			</li>
+			<li class="linav">
+				<a href="https://www.10bestdesign.com/dirtymarkup/" target="_blank"><i class="fas fa-remove-format fa-lg"></i> Formatter</a>
+			</li>
+			<li class="linav">
+				<a href="about-me.html"><i class="fas fa-address-card fa-lg"></i> About Me</a>
+			</li>
+		</ul>
+	</div>
+	</header>
+	<main>
+			<!-- <hr> -->
+		<section id="Assignments">
+			<h2>Family Members</h2>
+			<article id="assignment-1" class="">
+				<h3><a href="https://github.com/victorthoang/semantic-elements" target="_blank">Family member 1</a></h3>
+				<p>This was the first assignment for our Html110 B class!</p><a href="https://github.com/victorthoang/semantic-elements" target="_blank"><img alt="Assignment 1 image" src="./images/file-icon.png" width="100"></a>
+			</article>
+			<article id="assignment-2">
+				<h3><a href="https://github.com/victorthoang/portfolio" target="_blank">Family member 2</a></h3>
+				<p>Above is the link to the repository for assignment 2. Clicking the image below will take you to another page about me!</p><a href="about-me.html"><img alt="Victor Hoang" src="./images/Hoang-Victor.jpg" width="100"></a>
+			</article>
+			<article id="assignment-3">
+				<h3><a href="https://victorthoang.github.io/portfolio" target="_blank">Family member 3</a></h3>
+				<p>This was our first assignment with css. I made the page predominately green, added some hovering functionality, as well as made the navigation bar sticky so that it scrolls with the user. Clicking the image below will take you to the functioning website hosted on github pages!</p><a href="https://victorthoang.github.io/portfolio" target="_blank"><img alt="Assignment 3 image" src="./images/file-icon.png" width="100"></a>
+			</article>
+			<article id="assignment-4">
+				<h3><a href="https://victorthoang.github.io/mockup/" target="_blank">Family member 4</a></h3>
+				<p>Below is our first assignment to create a mockup of a webpage. This one is dedicated to cats!</p><img alt="Assignment 4" src="./images/sidebar-cat.jpg" width="100">
+			</article>
+			<article id="assignment-5">
+				<h3><a href="https://github.com/victorthoang" target="_blank">Family member 5</a></h3>
+				<p>Assignment 5 was about using flexboxes and using links to access Font Awesome and Google Fonts!</p><img alt="Assignment 5" src="./images/file-icon.png" width="100">
+			</article>
+			<article id="assignment-6">
+				<h3><a href="https://github.com/victorthoang" target="_blank">Family member 6</a></h3>
+				<p>For assignment 6, I learned how to properly use CSS to create transitions and pseudo selectors. Doing so allowed me to add some visual effects to the navigation buttons as well as select the alternating background color of each assignment box!</p><img alt="Assignment 6" src="./images/file-icon.png" width="100" class="imgLesson6">
+				<p>Hover the box above to see some animations!</p>
+            </article>
+            <p><a href="#top">Return to top</a></p>
+		</section>
+		<aside>
+			<p>Place holder for future aside tag.</p>
+		</aside>
+
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("myLinks");
+			  if (x.style.display === "block") {
+				x.style.display = "none";
+			  } else {
+				x.style.display = "block";
+			  }
+			}
+			</script>
+
+	</main>
+	<!-- <hr> -->
+	<footer class="footer">
+		<i class="far fa-copyright fa-lg"></i> 2020 Victor Hoang Inc. All rights reserved.
+	</footer>
+</body>
+</html>
