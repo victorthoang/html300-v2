@@ -6,8 +6,78 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Activity 07 - Vue</title>
         <link rel="stylesheet" href="/css/style.css">
+        <script src="https://unpkg.com/vue@next"></script>
     </head>
     <body>
+        <div id="app">
+            <p v-bind:title="greeting">
+                <span v-if="name === 'victor'">
+                {{ generateGreeting() }} {{ name }}
+                </span>
+                <span v-else>
+                    Goodbye
+                </span>
+            </p>
+
+            <ul>
+                <li v-for="num in favNumbers">
+                    {{ num }}
+                </li>
+            </ul>
+
+            <img v-if="imageShowing === true" v-bind:src="imgSrc">
+            <button v-if="imageShowing === false" v-on:click="toggleImage">Hello</button> <!--<button v-if="!imageShowing">Hello</button>-->
+            
+            <p>Counter: {{ counter }}</p>
+            <button v-on:click="plusOne">Add one!</button>
+            <button v-on:click="addMore(3)">Add three!</button>
+
+          </div>
+
+          
+
+          <script type="text/javascript">
+            const CounterApp = {
+            data() {
+                return {
+                counter: 0,
+                name: "victor",
+                greeting: this.generateGreeting(),
+                favNumbers: [3, 6, 15],
+                imageShowing: false,
+                imgSrc: ["https://picsum.photos/200/300"]    
+            }
+            },
+            methods:{
+                plusOne(){
+                    this.counter += 1
+                },
+                addMore(amt){
+                    this.counter += parseInt(amt)
+                },
+                generateGreeting(){
+                    return "Hello there! "
+                },
+                toggleImage(){
+                    this.imageShowing = true
+                },
+                
+                // randomItem (items) {
+                //         return items[Math.floor(Math.random()*items.length)];
+                //     },
+                //     generate () {
+                //         this.selectedImage = this.randomItem(this.images)
+                //     }
+                // },
+                // created() {
+                //     this.selectedImage = this.randomItem(this.images)
+                
+
+            }
+            }
+
+            Vue.createApp(CounterApp).mount('#app')
+          </script>
 
     </body>
 </html>
