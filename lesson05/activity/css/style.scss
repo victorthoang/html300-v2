@@ -4,3 +4,32 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.flexbox-nav{
+    background-color: #00A3AD;
+    color: #FFFFFF;
+    text-decoration: underline;
+    display: flex;
+    flex-flow: row wrap; //column
+    justify-content: space-around; //flex-start, flex-end
+    align-items: center;//flex-start, center, stretch, baseline, midline
+}
+
+a:hover{
+
+}
+
+@media screen and (max-width: 768px){
+    .flexbox-nav{
+        background-color: #00A3AD;
+        color: #FFFFFF;
+        display: flex;
+        flex-flow: column; //column
+        justify-content: space-around; //flex-start, flex-end
+        align-items: center;//flex-start, center, stretch, baseline, midline
+        .flex-controls{
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+        }
+    }
+}
