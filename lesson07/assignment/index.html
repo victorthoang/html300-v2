@@ -65,10 +65,6 @@
                     <p>birthday: {{person.birthday}}</p>
                 </li>
             </ul>
-			<p>This is my first Blog of the page. I will post more family information here in the future!</p>
-			<i class="fas fa-home"></i>
-			<p>In the mean time, here is a photo of my favorite doggo, Kaydee!</p>
-			<img alt="cute golden retriever staring back at the camera innocently" src="images/kaydee.jpg" width=400px height=500px>
 		</section>
     </div>
 
@@ -98,31 +94,7 @@
 		<i class="far fa-copyright fa-lg"></i> 2020 Victor Hoang Inc. All rights reserved.
 	</footer>
 
-    <!-- beginning of in class example -->
-    <!-- <div id="app"> -->
-            <p v-bind:title="greeting">
-                <span v-if="name === 'victor'">
-                {{ generateGreeting() }} {{ name }}
-                </span>
-                <span v-else>
-                    Goodbye
-                </span>
-            </p>
-
-            <ul>
-                <li v-for="num in favNumbers">
-                    {{ num }}
-                </li>
-            </ul>
-
-            <img v-if="imageShowing === true" v-bind:src="imgSrc">
-            <button v-if="imageShowing === false" v-on:click="toggleImage">Hello</button> <!--<button v-if="!imageShowing">Hello</button>-->
-            
-            <p>Counter: {{ counter }}</p>
-            <button v-on:click="plusOne">Add one!</button>
-            <button v-on:click="addMore(3)">Add three!</button>
-
-          </div>
+</div>
 
           
 
