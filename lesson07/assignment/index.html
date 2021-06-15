@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Activity 07 - Vue (blog page)</title>
+        <link rel="stylesheet" href="./styles/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/3f336ee7e9.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+        <!-- below is the app function for vue -->
+        <div id="app">
+            <!-- above is the app function for vue  -->
+        <a href="#main-content" class="hidden">Skip to main content</a>
+	<div class="content">
+	<!--insert contents here.-->
+	<header id="top">
+		<h1 class="pageheader">Family Blogs</h1>
+		<!-- <hr> -->
+	</header>
+	<ul class="ulNav">
+		<li class="linav">
+			<a class="active" href="./index.html"><i class="fas fa-home fa-lg"></i> Home</a>
+		</li>
+		<li class="linav">
+			<a href="./assignments.html" class="dropdown"><i class="fas fa-scroll fa-lg"></i> Assignments</a>
+		</li>
+		<li class="linav">
+			<a href="https://github.com/victorthoang" target="_blank"><i class="fab fa-github fa-lg"></i> GitHub</a>
+		</li>
+		<li class="linav">
+			<a href="https://jigsaw.w3.org/css-validator" target="_blank"><i class="fab fa-css3-alt fa-lg"></i> CSS Validator</a>
+		</li>
+		<li class="linav">
+			<a href="https://canvas.uw.edu" target="_blank"><i class="fas fa-graduation-cap fa-lg"></i> Canvas Homepage</a>
+		</li>
+		<li class="linav">
+			<a href="https://validator.w3.org/" target="_blank"><i class="fab fa-html5 fa-lg"></i> Website Validator</a>
+		</li>
+		<li class="linav">
+			<a href="https://www.10bestdesign.com/dirtymarkup/" target="_blank"><i class="fas fa-remove-format fa-lg"></i> Formatter</a>
+		</li>
+		<li class="linav">
+			<a href="about-me.html"><i class="fas fa-address-card fa-lg"></i> About Me</a>
+		</li>
+	</ul>
+	<main>
+	<!-- <hr> -->
+    <button @click="toggleShowBlog">
+        <span v-if="showBlog">Hide blog 1</span>
+        <!-- <span v-if="!showBlog">Show Blog</span> -->
+        <span v-else>Show blog 1</span>
+    </button>
+<div v-if="showBlog">
+		<section>
+			<h2 id="main-content">Blog post 1</h2>
+            <p>In our lesson 7 homework in May 2021, I learned how to use Vue for the first time. To display my family from Vue, I'm using a v-for and it is displaying my family in an array! Have a look!</p>
+            <ul>
+                <li class="liFamily" v-for="person in familyMembers" v-bind:class="{fav: person.isFav}">
+                    <img v-bind:src="person.img" alt="person.name">
+                    <h3>{{person.name}}</h3>
+                    <p>birthday: {{person.birthday}}</p>
+                </li>
+            </ul>
+		</section>
+    </div>
+
+    <button @click="toggleShowBlog2">
+        <span v-if="showBlog2">Hide blog 2</span>
+        <!-- <span v-if="!showBlog">Show Blog</span> -->
+        <span v-else>Show blog 2</span>
+    </button>
+<div v-if="showBlog2">
+        <section>
+			<h2 id="main-content">Blog post 2</h2>
+			<p>This is the second blog post in my page.</p>
+			<i class="fas fa-home"></i>
+			<p>In the mean time, here is a photo of my favorite doggo, Kaydee!</p>
+			<img alt="cute golden retriever staring back at the camera innocently" src="images/kaydee.jpg" width=400px height=500px>
+		</section>
+    </div>
+			<p>Or, if you prefer 
+				<span class="sr-only">this link opens in a new tab</span>
+				<a href="https://victorthoang.github.io/mockup/" target=_blank> cats</a>
+				...then you're one of THOSE PEOPLE!</p>
+
+	</main>
+	<!-- <hr> -->
+</div>
+	<footer class="footer">
+		<i class="far fa-copyright fa-lg"></i> 2020 Victor Hoang Inc. All rights reserved.
+	</footer>
+
+</div>
+
+          
+
+          <script type="text/javascript">
+            const CounterApp = {
+            data() {
+                return {
+                showBlog: true,
+                showBlog2: true,
+                familyMembers: [
+                    {name: 'Victor Hoang', birthday: '12/16/1990', img: 'images/file-icon.png', isFav: true}, 
+                    {name: 'George Hoang', birthday: '12/06/1988', img: 'images/file-icon.png', isFav: false}, 
+                    {name: 'Daniel Hoang', birthday: '08/07/1995', img: 'images/file-icon.png', isFav: false}, 
+                    {name: 'Du Hoang', birthday: '12/25/1950', img: 'images/file-icon.png', isFav: true},
+                    {name: 'Nhi Truong', birthday: '11/14/1960', img: 'images/file-icon.png', isFav: false},
+                ],
+                counter: 0,
+                name: "victor",
+                greeting: this.generateGreeting(),
+                favNumbers: [3, 6, 15],
+                imageShowing: false,
+                imgSrc: ["https://picsum.photos/200/300"]    
+            }
+            },
+            methods:{
+                plusOne(){
+                    this.counter += 1
+                },
+                addMore(amt){
+                    this.counter += parseInt(amt)
+                },
+                generateGreeting(){
+                    return "Hello there! "
+                },
+                toggleImage(){
+                    this.imageShowing = true
+                },
+                toggleShowBlog(){
+                    this.showBlog = !this.showBlog
+                },
+                toggleShowBlog2(){
+                    this.showBlog2 = !this.showBlog2
+                },
+                
+                // randomItem (items) {
+                //         return items[Math.floor(Math.random()*items.length)];
+                //     },
+                //     generate () {
+                //         this.selectedImage = this.randomItem(this.images)
+                //     }
+                // },
+                // created() {
+                //     this.selectedImage = this.randomItem(this.images)
+                
+
+            }
+            }
+
+            Vue.createApp(CounterApp).mount('#app')
+          </script>
+
+    </body>
+</html>
